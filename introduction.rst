@@ -14,6 +14,8 @@ One choice is to ignore cells completely, e.g., Physiome [1] models tissues as c
     :figclass: align-center
 
     **Figure1:** Detail of a typical two-dimensional GGH cell-lattice configuration. Each colored domain represents a single spatially-    extended cell. The detail shows that each generalized cell is a set of cell-lattice sites (or pixel), , with a unique index, :math:`\sigma_(i)`  , here 4 or 7. The color denotes the cell type,  .
-:math:`\sigma(1)` 
+.. math::
+    (a+b)^2
+    \sigma(1) 
 
 Multi-cell simulations are useful to interpolate between single-cell and continuum-tissue extremes because cells provide a natural level of abstraction for simulation of tissues, organs and organisms (4). Treating cells phenomenologically reduces the millions of interactions of gene products to several behaviors: most cells can move, divide, die, differentiate, change shape, exert forces, secrete and absorb chemicals and electrical charges, and change their distribution of surface properties. The *Glazier-Graner-Hogeweg (GGH)* approach facilitates multiscale simulations by defining spatially-extended *generalized cells*, which can represent clusters of cells, single cells, sub-compartments of single cells or small subdomains of non-cellular materials. This flexible definition allows tuning of the level of detail in a simulation from intracellular to continuum without switching simulation framework to examine the effect of changing the level of detail on a macroscopic outcome, e.g., by switching from a coupled ordinary-differential-equation (ODE) Reaction-Kinetics (RK) model of gene regulation to a Boolean description or from a simulation that includes subcellular structures to one that neglects them.
