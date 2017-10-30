@@ -19,6 +19,7 @@ The goal of this manual is to teach biomodelers how to effectively use multi-sca
    :caption: Contents
    
    introduction
+   references
 
 Need More
 ----------
