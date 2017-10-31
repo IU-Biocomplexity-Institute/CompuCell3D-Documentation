@@ -19,7 +19,8 @@ The goal of this manual is to teach biomodelers how to effectively use multi-sca
    :caption: Contents
    
    introduction
-   ggh-applications-simulation-overview
+   ggh-applications
+   ggh-simulation-overview
    references
 
 Need More
