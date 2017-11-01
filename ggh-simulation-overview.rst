@@ -20,18 +20,29 @@ The core of GGH simulations is the effective energy, which describes cell behavi
 
 One of the most important effective-energy terms describes cell adhesion. If cells did not stick to each other and to extracellular materials, complex life would not exist [86]. Adhesion provides a mechanism for building complex structures, as well as for holding them together once they have formed. The many families of adhesion molecules (CAMs, cadherins, etc.) allow embryos to control the relative adhesivities of their various cell types to each other and to the noncellular ECM surrounding them, and thus to define complex architectures in terms of the cell configurations which minimize the adhesion energy.
 To represent variations in energy due to adhesion between cells of different types, we define a boundary energy that depends on  , the boundary energy per unit area between two cells (:math:`\sigma, \sigma'`) of given types (:math:`\tau(\sigma), \tau(\sigma')`) at a link (the interface between two neighboring pixels): 
+
 .. math:: H_boundary = \sum  			(1)
+
 where the sum is over all neighboring pairs of lattice sites   and   (note that the neighbor range may be greater than one), and the boundary-energy coefficients are symmetric,
+
 .. math:: J(\tau(\sigma),\tau(\sigma')) = J(\tau(\sigma'), \tau(\sigma))							(2)
+
 In addition to boundary energy, most simulations include multiple constraints on cell behavior. The use of constraints to describe behaviors comes from the physics of classical mechanics. In the GGH context we write constraint energies in a general elastic form:
+
 .. math:: H_constraint = \lambda(value - target_value) 							(3) 
+
 The constraint energy is zero if   (the constraint is satisfied) and grows as value diverges from . The constraint is elastic because the exponent of 2 effectively creates an ideal spring pushing on the cells and driving them to satisfy the constraint.   is the spring constant (a positive real number), which determines the constraint strength. Smaller values of  allow the pattern to deviate more from the equilibrium condition (i.e., the condition satisfying the constraint). Because the constraint energy decreases smoothly to a minimum when the constraint is satisfied, the energy-minimizing dynamics used in the GGH automatically drives any configuration towards one that satisfies the constraint. However, because of the stochastic simulation method, the cell lattice need not satisfy the constraint exactly at any given time, resulting in random fluctuations. In addition, multiple constraints may conflict, leading to configurations which only partially satisfy some constraints.
 Because biological cells have a given volume at any time, most GGH simulations employ a volume constraint, which restricts volume variations of generalized cells from their target volumes:
+
 .. math:: H_vol = \sum							(4)
+
 where for cell  ,   denotes the inverse compressibility of the cell,   is the number of pixels in the cell (its volume), and   is the cell’s target volume. This constraint defines   as the pressure inside the cell. A cell with   has a positive internal pressure, while a cell with   has a negative internal pressure.
 Since many cells have nearly fixed amounts of cell membrane, we often use a surface- area constraint of form:
+
 .. math:: H_surf = \sum (5)
+
 where   is the surface area of cell  ,   is its target surface area, and   is its inverse membrane compressibility. 
 Adding the boundary energy and volume constraint terms together (equations (1) and (4)), we obtain the basic GGH effective energy:
+
 .. math:: H_GGH = \sum + \sum 				(6)
 
