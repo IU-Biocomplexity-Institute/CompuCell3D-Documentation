@@ -19,3 +19,4 @@ The initial condition specifies the initial configurations of the cell lattice, 
    :maxdepth: 2
 
    effective-energy
+   dynamics
