@@ -20,3 +20,4 @@ The initial condition specifies the initial configurations of the cell lattice, 
 
    effective-energy
    dynamics
+   algorithmic-impl-ee-calculations.rst
