@@ -18,10 +18,11 @@ The goal of this manual is to teach biomodelers how to effectively use multi-sca
    :maxdepth: 2
    :caption: Contents
    :numbered:
-   
+
    introduction
    ggh-applications
    ggh-simulation-overview
+   compucell3d
    references
 
 Need More
