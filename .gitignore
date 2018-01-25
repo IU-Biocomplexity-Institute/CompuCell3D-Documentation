@@ -1,0 +1,9 @@
+nbuild/*
+nbuild/doctrees/environment.pickle
+nbuild/html/_images/fig2_ggh_index_copy_attempt.png
+nbuild/html/_sources/dynamics.rst.txt
+nbuild/html/_sources/effective-energy.rst.txt
+nbuild/html/dynamics.html
+*.html
+.DS_Store
+*.html
