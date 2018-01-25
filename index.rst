@@ -23,6 +23,7 @@ The goal of this manual is to teach biomodelers how to effectively use multi-sca
    ggh-applications
    ggh-simulation-overview
    compucell3d
+   building-cc3dml-based-simulations
    references
 
 Need More
