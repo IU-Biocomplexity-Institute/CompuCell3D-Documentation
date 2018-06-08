@@ -3,7 +3,7 @@ Cell Sorting Simulation
 
 Cell sorting due to differential adhesion between cells of different types is one of the basic mechanisms creating tissue domains during development and wound healing and in maintaining domains in homeostasis. In a classic *in vitro* cell sorting experiment to determine relative cell adhesivities in embryonic tissues, mesenchymal cells of different types are dissociated, then randomly mixed and reaggregated. Their motility and differential adhesivities then lead them to rearrange to reestablish coherent homogenous domains with the most cohesive cell type surrounded by the less. The simulation of the sorting of two cell types was the original motivation for the development of GGH methods. Such simple simulations show that the final configuration depends only on the hierarchy of adhesivities, while the sorting dynamics depends on the ratio of the adhesive energies to the amplitude of cell fluctuations.
 
-To invoke the simulation wizard to create a simulation, we click ``CC3DProject->New CC3D Project`` in the menu bar. In the initial screen we specify the name of the model (``cellsorting``), its storage directory (*C:\CC3DProjects*) and whether we will store the model as pure CC3DML, Python and CC3DML or pure Python. This tutorial will use Python and CC3DML.
+To invoke the simulation wizard to create a simulation, we click ``CC3DProject->New CC3D Project`` in the menu bar. In the initial screen we specify the name of the model (``cellsorting``), its storage directory (*C:\\CC3DProjects*) and whether we will store the model as pure CC3DML, Python and CC3DML or pure Python. This tutorial will use Python and CC3DML.
 
 .. figure:: images/fig7_cc3d_simulation_wizard.png
     :align: center

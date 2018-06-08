@@ -23,3 +23,4 @@ We will denote the ``<Tag>…</Tag>`` syntax as a ``<Tag>`` tag pair. The openin
 Although XML parsers ignore indentation, all the listings presented in this chapter are block-indented for better readability.
 
 .. include:: cell-sorting-simulation.rst
+.. include:: angiogenesis-model.rst
