@@ -129,7 +129,7 @@ We show screenshots of a simulation of the angiogenesis model in Figure 16 [Merk
 
 .. figure:: images/fig16_initial_cluster_adhering_endothelial_cells.png
     :align: center
-    :height: 100px
+    :height: 150px
     :alt: Figure16 An initial cluster of adhering endothelial cells forms a capillary-like network via sprouting angiogenesis
     :figclass: align-center
 
