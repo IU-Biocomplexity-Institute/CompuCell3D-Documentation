@@ -54,7 +54,7 @@ The diffusion equation that governs VEGF ( :math:`V(x)`) field evolution is:
 
 .. math:: {\delta V(\vec{x}) \over{\delta t}} = D^{EC}_{VEGF} \bigtriangledown^2 V(\vec{x}) - \gamma_{VEGF} V(\vec{x}) \delta(\tau(\sigma(\vec{x}), M) + S^{EC} \delta(\tau(\sigma(\vec{x})), EC)
 
-where, :math:`\delta(\tau(\sigma(\vec{x})), EC)=1` inside ``Endothelial`` cells and 0 elsewhere and  :math:`\delta(\tau(\sigma(\vec{x}), M)=1` inside ``medium`` and 0 elsewhere. We set the diffusion constant  :math:`D_{VEGF}=0.042 µm^2/sec` (0.16 voxel :sup:`2`/MCS, about two orders of magnitude smaller than experimental values),  the decay coefficient :math:`\gamma_{VEGF} =1 h^{-1}` [130,131] (0.016 MCS-1) for Medium pixels and  :math:`\gamma_{VEGF}=0` inside Endothelial cells, and the secretion rate   :math:`S^{EC}=0.013` pg (voxel MCS):sup:`-1`.
+where, :math:`\delta(\tau(\sigma(\vec{x})), EC)=1` inside ``Endothelial`` cells and 0 elsewhere and  :math:`\delta(\tau(\sigma(\vec{x}), M)=1` inside ``medium`` and 0 elsewhere. We set the diffusion constant  :math:`D_{VEGF}=0.042 µm^2/sec` (0.16 voxel :sup:`2`/MCS, about two orders of magnitude smaller than experimental values) [#f7]_,  the decay coefficient :math:`\gamma_{VEGF} =1 h^{-1}` [130,131] (0.016 MCS-1) for Medium pixels and  :math:`\gamma_{VEGF}=0` inside Endothelial cells, and the secretion rate   :math:`S^{EC}=0.013` pg (voxel MCS):sup:`-1`.
 In the CC3DML script describing ``FlexibleDiffusionSolverFE`` (Listing 2, lines 38-47) we set the values of the ``<DiffusionConstant>`` and ``<DecayConstant>`` tags to 0.16 and 0.016 respectively. To prevent chemical decay inside Endothelial cells we add the line ``<DoNotDecayIn>Endothelial</DoNotDecayIn>`` inside the ``<DiffusionData>`` tag pair.
 Finally, we edit ``BlobInitializer`` (lines 49-56) to start with a solid sphere 10 pixels in radius centered at x=25, y=25, z=25 with initial cell width 4, as following-
 
@@ -136,3 +136,5 @@ We show screenshots of a simulation of the angiogenesis model in Figure 16 [Merk
     **Figure 16.:** An initial cluster of adhering endothelial cells forms a capillary-like network via sprouting angiogenesis. A: 0 hours (0 MCS), B: ~2 hours (100 MCS), C: ~5 hours (250 MCS), D: ~18 hours (1100 MCS).
 
 Since real endothelial cells are elongated, we can include the ``Cell-elongation`` plugin in the Simulation Wizard to better reproduce individual cell morphology. However, excessive cell elongation causes cell fragmentation. Adding either the ``Global`` or ``Fast Connectivity Constraint`` plugin prevents cell fragmentation.
+
+.. [#f7] ``FlexibleDiffusionSolverFE`` becomes unstable for values of  :math:'D_{VEGF}>0.16 voxel2/MCS'. For larger diffusion constants we must call the algorithm multiple times per MCS (See the *Three-Dimensional Vascular Solid Tumor Growth* section).
