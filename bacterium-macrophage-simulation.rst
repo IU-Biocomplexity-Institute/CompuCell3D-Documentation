@@ -106,7 +106,7 @@ where :math:`c(i)` is the chemical field at the index-copy target pixel, :math:`
 
 .. figure:: images/fig18_connect_field_ggh_dynamics_chemotaxis_energy_term.png
     :align: center
-    :height: 100px
+    :height: 150px
     :alt: Figure18 Connecting a field to GGH dynamics using a chemotaxis-energy term.
     :figclass: align-center
 
@@ -202,7 +202,7 @@ All lines with the same cell index (first column) define a single cell. Figure 1
 
 .. figure:: images/fig19_init_config_cell_lattice_PIF.png
     :align: center
-    :height: 100px
+    :height: 150px
     :alt: Figure19 Initial configuration of the cell lattice based on the PIF in Listing 4.
     :figclass: align-center
 
@@ -257,7 +257,7 @@ Figure 20 shows snapshots of the bacterium-and-macrophage simulation. By adjusti
 
 .. figure:: images/fig20_snapshot_bact_mac_simulation.png
     :align: center
-    :height: 100px
+    :height: 200px
     :alt: Figure20 Snapshots of the bacterium-and-macrophage simulation
     :figclass: align-center
 
