@@ -24,3 +24,4 @@ Although XML parsers ignore indentation, all the listings presented in this chap
 
 .. include:: cell-sorting-simulation.rst
 .. include:: angiogenesis-model.rst
+.. include:: bacterium-macrophage-simulation.rst
